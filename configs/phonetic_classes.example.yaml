@@ -1,0 +1,163 @@
+# Phonetic Class Definitions for FieldPhone
+#
+# Define natural classes of sounds for your language's inventory.
+# These are used by the query engine to resolve natural-language queries
+# like "mid vowel followed by a nasal" into actual character sequences.
+#
+# Each class maps a name to a list of IPA symbols (including encoding variants).
+# The query engine expands class references to match any member.
+
+# ── Vowel Height ──
+
+high_vowel:
+  - "i"
+  - "u"
+  - "ɪ"
+  - "ʊ"
+
+tense_high_vowel:
+  - "i"
+  - "u"
+
+lax_high_vowel:
+  - "ɪ"
+  - "ʊ"
+
+mid_vowel:
+  - "e"
+  - "o"
+  - "ɛ"
+  - "ɔ"
+
+tense_mid_vowel:
+  - "e"
+  - "o"
+
+lax_mid_vowel:
+  - "ɛ"
+  - "ɔ"
+
+low_vowel:
+  - "a"
+
+# ── Vowel Backness ──
+
+front_vowel:
+  - "i"
+  - "ɪ"
+  - "e"
+  - "ɛ"
+
+back_vowel:
+  - "u"
+  - "ʊ"
+  - "o"
+  - "ɔ"
+
+central_vowel:
+  - "a"
+  - "ə"
+
+# ── Consonant Manner ──
+
+nasal:
+  - "m"
+  - "n"
+  - "ɲ"
+  - "ŋ"
+
+stop:
+  - "p"
+  - "b"
+  - "t"
+  - "d"
+  - "k"
+  - "ɡ"
+
+fricative:
+  - "f"
+  - "v"
+  - "s"
+  - "z"
+  - "ʃ"
+  - "ʒ"
+  - "β"
+  - "ɣ"
+  - "h"
+
+approximant:
+  - "w"
+  - "j"
+  - "l"
+  - "ɾ"
+
+# ── Consonant Place ──
+
+labial:
+  - "p"
+  - "b"
+  - "m"
+  - "f"
+  - "v"
+  - "β"
+  - "w"
+
+coronal:
+  - "t"
+  - "d"
+  - "n"
+  - "s"
+  - "z"
+  - "l"
+  - "ɾ"
+
+palatal:
+  - "ɲ"
+  - "ʃ"
+  - "ʒ"
+  - "j"
+
+velar:
+  - "k"
+  - "ɡ"
+  - "ŋ"
+  - "ɣ"
+
+# ── Voicing ──
+
+voiced:
+  - "b"
+  - "d"
+  - "ɡ"
+  - "m"
+  - "n"
+  - "ɲ"
+  - "ŋ"
+  - "v"
+  - "z"
+  - "ʒ"
+  - "β"
+  - "ɣ"
+  - "w"
+  - "j"
+  - "l"
+  - "ɾ"
+
+voiceless:
+  - "p"
+  - "t"
+  - "k"
+  - "f"
+  - "s"
+  - "ʃ"
+  - "h"
+
+# ── Tone (categorical labels) ──
+
+high_tone:
+  - "H"
+  - "́"    # combining acute accent
+
+low_tone:
+  - "L"
+  - "̀"    # combining grave accent

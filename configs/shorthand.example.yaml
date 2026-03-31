@@ -1,0 +1,52 @@
+# Shorthand Expansion Mappings for FieldPhone
+#
+# Define shorthand sequences that expand to IPA characters during transcription.
+# Mappings are applied in order, longest match first.
+#
+# These replicate and extend the scripts Odden uses in Word —
+# typing shorthand is faster than hunting for IPA characters.
+
+# ── Vowels ──
+
+I: "ɪ"
+U: "ʊ"
+E: "ɛ"
+O: "ɔ"
+"@": "ə"
+A: "æ"
+
+# ── Long vowels (double the shorthand) ──
+
+ii: "iː"
+uu: "uː"
+II: "ɪː"
+UU: "ʊː"
+ee: "eː"
+oo: "oː"
+EE: "ɛː"
+OO: "ɔː"
+aa: "aː"
+
+# ── Consonants ──
+
+N: "ŋ"
+S: "ʃ"
+Z: "ʒ"
+J: "ɲ"
+B: "β"
+G: "ɣ"
+R: "ɾ"
+
+# ── Tone diacritics ──
+# Applied after the vowel character
+
+"'": "\u0301"     # combining acute (high tone)
+"`": "\u0300"     # combining grave (low tone)
+"^": "\u0302"     # combining circumflex (falling tone)
+"v": "\u030C"     # combining caron (rising tone)
+"!": "\u030B"     # combining double acute (extra high)
+
+# ── Other diacritics ──
+
+"~": "\u0303"     # combining tilde (nasalization)
+":": "ː"         # length mark

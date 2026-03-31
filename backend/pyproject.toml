@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fieldphone"
+version = "0.1.0"
+description = "Phoneme classification and database management for field linguists"
+requires-python = ">=3.11"
+
+[tool.setuptools.packages.find]
+include = ["fieldphone*"]
