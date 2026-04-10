@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FieldPhone - Upload Data</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>FieldPhone</h1>
+    <div class="nav-links">
+      <a href="index.html">Search Data</a>
+      <button onclick="import('./js/auth.js').then(m => m.logout())">Logout</button>
+    </div>
+  </header>
+
+  <main class="app-container">
+    <div style="margin-bottom: 2rem;">
+      <h2 style="font-family: 'Outfit', sans-serif; font-size: 2rem; margin: 0 0 0.5rem 0;">Data Ingestion</h2>
+      <p style="color: var(--text-muted); margin: 0;">Update the database mappings or insert new audio sources securely.</p>
+    </div>
+
+    <div class="glass-panel">
+      <div class="upload-section" style="border-bottom: 1px solid var(--glass-border);">
+        <h3 style="background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">1. Database Map</h3>
+        <p>Select the standard `.txt` dictionary file extracted from the fieldwork.</p>
+        <form id="dbUploadForm">
+          <div class="form-group">
+            <input type="file" id="dbInput" accept=".txt" required style="background: transparent; border: 1px dashed var(--glass-border);" />
+          </div>
+          <button type="submit" class="btn-primary" style="margin-top: 0.5rem;">Ingest Sync</button>
+        </form>
+        <p id="dbStatus" style="margin-top: 1rem; font-weight: 500; min-height: 1.5rem;"></p>
+      </div>
+
+      <div class="upload-section">
+        <h3 style="background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">2. Source Audio</h3>
+        <p>Upload `.mp3` or `.wav` cuts to tie them dynamically to the mapping records.</p>
+        <form id="audioUploadForm">
+          <div class="form-group">
+            <input type="file" id="audioInput" accept=".mp3,.wav" multiple required style="background: transparent; border: 1px dashed var(--glass-border);" />
+          </div>
+          <button type="submit" class="btn-primary" style="margin-top: 0.5rem;">Upload sequence</button>
+        </form>
+        <p id="audioStatus" style="margin-top: 1rem; font-weight: 500; min-height: 1.5rem;"></p>
+        <ul id="progressList" class="progress-list"></ul>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="js/auth.js"></script>
+  <script type="module" src="js/upload.js"></script>
+</body>
+</html>
