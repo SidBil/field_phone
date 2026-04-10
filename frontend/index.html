@@ -14,25 +14,26 @@
     </div>
   </header>
 
-  <form id="searchForm" class="search-bar">
-    <div class="search-inputs">
-      <input type="text" id="searchInput" placeholder="e.g. mid vowel followed by nasal, or type IPA directly: ɛhi" autocomplete="off" />
-      <button type="submit">Search</button>
-    </div>
-    <div class="checkbox-group">
-      <input type="checkbox" id="stripToneCheck" />
-      <label for="stripToneCheck">Ignore tone marks</label>
-    </div>
-  </form>
+  <main class="app-container">
+    <form id="searchForm" class="search-bar glass-panel">
+      <div class="search-inputs">
+        <input type="text" id="searchInput" placeholder="Search phonetics..." autocomplete="off" />
+        <button type="submit" class="btn-primary">Search</button>
+      </div>
+      <div class="checkbox-group" style="padding-left: 0.5rem;">
+        <input type="checkbox" id="stripToneCheck" />
+        <label for="stripToneCheck">Ignore tone marks</label>
+      </div>
+    </form>
 
-  <div id="errorBox" class="error" style="display: none;"></div>
-  <div id="summaryBox" class="summary" style="display: none;"></div>
+    <div id="errorBox" class="error" style="display: none;"></div>
+    <div id="summaryBox" class="summary glass-panel" style="display: none;"></div>
 
-  <ul id="resultsTable" class="results-table">
-    <!-- Results added by search.js -->
-  </ul>
+    <ul id="resultsTable" class="results-table glass-panel" style="padding: 0.5rem;">
+      <!-- Results added by search.js -->
+    </ul>
+  </main>
 
-  <!-- The script will enforce auth if not on login -->
   <script type="module" src="js/auth.js"></script>
   <script type="module" src="js/search.js"></script>
 </body>
